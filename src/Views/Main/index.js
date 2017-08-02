@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import WelcomeScreen from '../../Components/WelcomeScreen';
 
 class App extends Component {
-  render() {
+    render() {
     return (
-      <Image
-        source={require('../../static/images/background.jpg')}
-        style={styles.container}>
-      </Image>
+      <WelcomeScreen/>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-  }
-});
 
 export default App;
