@@ -1,19 +1,37 @@
 import { TabNavigator, TabBarBottom } from 'react-navigation';
-import WelcomeScreen from '../Components/WelcomeScreen';
+import Home from '../Components/Home';
 
 const TabNavigatorConfig = {
-  tabBarComponent: TabBarBottom
+  tabBarComponent: TabBarBottom,
+  tabBarPosition: 'bottom',
+  tabBarOptions: {
+    activeTintColor: '#314acf',
+    labelStyle: {
+      fontSize: 12
+    },
+    labelStyle: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    style: {
+      display: 'flex',
+      borderColor: 'black'
+    }
+  }
 };
 
 const BaseNavigation = TabNavigator(
   {
-    WelcomeScreen: {
-      screen: WelcomeScreen,
+    Home: {
+      screen: Home,
+      initialRouteName: Home,
       navigationOptions: {
-        // tabBarVisible: false
+        tabBarVisible: false
       }
     },
-    WelcomeScreen1: { screen: WelcomeScreen }
+    // WelcomeScreen1: { screen: Home }
   },
   TabNavigatorConfig
 );
